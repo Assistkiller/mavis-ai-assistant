@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css">
+  <title>M.A.V.I.S. v0.1</title>
+  <link rel="icon" href="/public/assets/logo-icon.png" type="image/png">
+  <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/public/styles.css">
+  <!-- Estilos do Highlight.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/monokai.min.css">
+</head>
+<body>
+  <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+  <button class="user-btn" onclick="toggleSidebar()">🦢</button>
+  <div class="glowing-bar"></div>
+  <div class="glowing"></div>
+  <div class="sidebar" id="workflow-sidebar">
+    <div id="workflow-container">
+      <h3>Workflows</h3>
+      <ul class="workflow-list" id="workflow-list">
+      </ul>
+      <button onclick="createNewWorkflow()" class="workflow-btn ylw">New Subject</button>
+    </div>
+  </div>
+  
+  <div class="triangle-border"></div>
+  <div class="triangle-border-glow"></div>
+  <div class="triangle-outter"></div>
+  <div class="triangle-outter-border"></div>
+  <div class="triangle"></div>
+  <div class="shadow"></div>
+  <div class="title">
+    <div class="ma">M.A.</div>
+    <img src="/public/assets/logo.gif" alt="Logo" class="logo">
+    <div class="is">I.S.</div>
+  </div>
+  <canvas id="canvas"></canvas>
+  <div class="sky"></div>
+  <div class="chat-container">
+    <div id="scrollButtons" class="scroll-buttons">
+      <button class="scroll-button" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></button>
+      <button class="scroll-button" onclick="scrollToBottom()"><i class="fas fa-chevron-down"></i></button>
+    </div>
+    <div id="chat-history">
+        <!-- CHAT_HISTORY -->
+    </div>
+    <div class="tool-box">
+      <div class="tool-line">
+        <div class="button">
+          <i class="fas fa-globe"></i>
+          <span class="tooltip">Internet</span>
+      </div>
+      <div class="button">
+          <i class="fas fa-image"></i>
+          <span class="tooltip">Picture</span>
+      </div>
+      <div class="button">
+          <i class="fas fa-brain"></i>
+          <span class="tooltip">Think</span>
+      </div>
+        <div class="button">
+          <i class="fas fa-cogs"></i>
+          <span class="tooltip">System Prompt</span>
+      </div>
+      <div class="button">
+          <i class="fas fa-sync-alt"></i>
+          <span class="tooltip">Recurrent Prompt</span>
+      </div>
+      <div class="button">
+          <i class="fas fa-book"></i>
+          <span class="tooltip">RAG</span>
+      </div>
+      </div>
+      <div class="tool-line">
+        <div class="button">
+          <i class="fas fa-database"></i>
+          <span class="tooltip">GPT4o</span>
+      </div>
+      <div class="button">
+          <i class="fas fa-comments"></i>
+          <span class="tooltip">GPT4om</span>
+      </div>
+      <div class="button">
+          <i class="fas fa-user-secret"></i>
+          <span class="tooltip">Ollama Uncensored</span>
+      </div>
+      <div class="button">
+          <i class="fas fa-search"></i>
+          <span class="tooltip">DeepSeek</span>
+      </div>
+      </div>
+  </div>
+    <div id="input-container">
+      <form id="chat-form" hx-post="/chat" hx-target="#history_markdown" hx-swap="beforeend" method="POST">
+        <textarea name="user_input" id="user_input" placeholder="Type a message..." onkeydown="handleKeyDown(event)"></textarea>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    by Regis Dantas
+  </div>
+  <!-- Biblioteca Highlight.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script src="/public/scripts.js"></script>
+  <script src="/public/tunderstrike.js"></script>
+</body>
+</html>
