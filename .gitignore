@@ -3,6 +3,7 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+chat_history.db
 # C extensions
 *.so
 
